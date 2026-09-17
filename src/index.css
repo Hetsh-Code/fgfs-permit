@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .font-handwriting {
+    font-family: 'Caveat', cursive, sans-serif;
+  }
+  .font-mono-code {
+    font-family: 'Space Mono', monospace;
+  }
+}
+
+/* Custom subtle cloud drift */
+@keyframes cloudDrift {
+  0% {
+    transform: translateX(-10%);
+  }
+  50% {
+    transform: translateX(10%);
+  }
+  100% {
+    transform: translateX(-10%);
+  }
+}
+
+.animate-cloud-drift {
+  animation: cloudDrift 28s ease-in-out infinite alternate;
+}
+
+.animate-cloud-drift-slow {
+  animation: cloudDrift 42s ease-in-out infinite alternate-reverse;
+}
+
+/* Lined notebook/letter paper background pattern */
+.bg-letter-ruled {
+  background-color: #fdfbf7;
+  background-image: repeating-linear-gradient(
+    transparent,
+    transparent 31px,
+    #e2e8f0 31px,
+    #e2e8f0 32px
+  );
+}
